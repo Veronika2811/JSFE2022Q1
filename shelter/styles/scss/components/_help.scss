@@ -2,7 +2,7 @@
   padding: 80px 0px 100px;
 
   @include media-mobile {
-    padding: 42px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -12,14 +12,14 @@
   text-align: center;
 
   @include media-mobile {
-    gap: 42px;
+    gap: 40px;
   }
 }
 
 .help__list {
   @include flex($wrap: wrap);
-  gap: 55px 119px;
-  
+  gap: 55px 120px;
+
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,80 +34,10 @@
 }
 
 .help__title {
-  padding-top: 30px;
   @include font($size: 2rem, $height: 2.3rem);
+  padding-top: 30px;
 
   @include media-mobile {
     @include font($size: 1.5rem, $height: 1.65rem);
   }
 }
-
-// .help {
-//   background-color: $color-light;
-
-//   .title {
-//     text-align: center;
-//     padding-top: 1px;
-//     padding-left: 2px;
-
-//     @include media-mobile {
-//       padding-top: 2px;
-//       padding-left: 1px;
-//     }
-//   }
-// }
-
-// .help__list {
-//   @include flex();
-//   padding: 59px 86px 0 88px;
-//   column-gap: 119px;
-//   flex-wrap: wrap;
-//   row-gap: 55px;
-//   flex-direction: row;
-
-//   @include media-tablet {
-//     padding: 59px 0 0 0;
-//     column-gap: 40px;
-//     justify-content: center;
-//   }
-
-//   @include media-mobile {
-//     padding-top: 42px;
-//     gap: 30px 20px;
-//     margin: auto;
-//     justify-content: flex-start;
-//     max-width: 300px;
-//   }
-// }
-
-// .help__icons-group {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   @include media-tablet {
-//     width: 27%;
-//   }
-  
-//   @include media-mobile {
-//     width: 140px;
-//   }
-// }
-
-// .help__icon-name {
-//   @include font($size: 2rem, $height: 2.3rem);
-//   padding-top: 30px;
-//   color: $color-title;
-
-//   @include media-mobile {
-//     @include font($size: 1.5rem, $height: 1.7rem);
-//     padding-top: 20px;
-//   }
-// }
-
-// .icon__help {
-//   @include media-mobile {
-//     width: 50px;
-//     height: 50px;
-//   }
-// }

@@ -9,14 +9,19 @@
 }
 
 .navigation__link {
-  @include font($family: $font-additional, $size: 1.5rem, $spacing: 0rem, $height: 2.4rem);
-  color: $color-text-main;
   @extend %transition;
+  @include font(
+    $family: $font-additional,
+    $size: 1.5rem,
+    $spacing: 0rem,
+    $height: 2.4rem
+  );
+  color: $color-text-main;
 
   &.active {
-    padding-bottom: 4px;
-    border-bottom: 3px solid $color-primary;
+    padding-bottom: 5px;
     color: $color-text-main-hover;
+    border-bottom: 2px solid $color-primary;
     cursor: default;
   }
 
@@ -32,9 +37,9 @@
     color: $color-title;
 
     &.active {
+      padding-bottom: 5px;
       color: $color-title;
-      border-bottom: 3px solid $color-primary;
-      padding-bottom: 4px;
+      border-bottom: 2px solid $color-primary;
       cursor: default;
     }
 
@@ -43,60 +48,3 @@
     }
   }
 }
-
-// .navigation {
-//   width: 443px;
-//   @include flex($justify: space-between);
-//   @include font($family: $arial, $size: 1.5rem, $spacing: 0, $height: 2.4rem);
-//   padding-bottom: 5px;
-
-//   @include media-mobile {
-//     width: 243px;
-//     height: 327px;
-//     display: flex;
-//     flex-wrap: wrap;
-//     z-index: 3;
-//     justify-content: center;
-//     margin-top: 139px;
-//     gap: 47px;
-//   }
-// }
-
-// .navigation__link {
-//   @extend %transition;
-//   cursor: pointer;
-
-//   &--light {
-//     color: $color-text-main;
-
-//     &:hover {
-//       color: $color-text-main-hover;
-//     }
-//   }
-
-//   &--dark {
-//     color: $color-title;
-
-//     &:hover {
-//       color: $color-button-text;
-//     }
-//   }
-// }
-
-.active {
-  // padding-bottom: 4px;
-  // border-bottom: 3px solid $color-primary;
-  // color: $color-text-main-hover;
-  // cursor: default;
-
-  // @include media-mobile {
-  //   padding-bottom: 7px;
-  // }
-}
-
-// .active--dark {
-//   color: $color-title;
-//   border-bottom: 3px solid $color-primary;
-//   padding-bottom: 4px;
-//   cursor: default;
-// }

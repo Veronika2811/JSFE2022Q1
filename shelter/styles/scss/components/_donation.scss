@@ -3,7 +3,7 @@
   background-color: $color-background-pets;
 
   @include media-mobile {
-    padding: 42px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -14,10 +14,10 @@
 
 .donation__image {
   width: 505px;
-  height: 261px;
-  background: url('/images/png/donation/dog.png') no-repeat;
+  height: 260px;
+  background: url('../images/png/donation/dog.png') no-repeat;
   background-size: cover;
-  
+
   @include media-tablet {
     order: 2;
     width: adaptiv-value(505, 768);
@@ -49,11 +49,16 @@
   @include flex();
   gap: 15px;
   padding: 10px 15px;
-  border-radius: 9px;
+  border-radius: 10px;
 }
 
 .donation__description {
-  @include font($family: $font-additional, $spacing: 0rem, $size: 1.2rem, $height: 1.8rem);
+  @include font(
+    $family: $font-additional,
+    $spacing: 0rem,
+    $size: 1.2rem,
+    $height: 1.8rem
+  );
   font-style: italic;
   color: $color-donation-description;
 
@@ -61,86 +66,3 @@
     text-align: justify;
   }
 }
-
-// .donation__wrapper {
-//   @include flex($align: flex-start);
-//   gap: 32px;
-
-//   @include media-tablet {
-//     flex-direction: column-reverse;
-//     align-items: center;
-//     gap: 48px;
-//   }
-  
-//   @include media-mobile {
-//     margin-top: 1px;
-//     text-align: center;
-//     gap: 31px;
-//   }
-// }
-
-// .img__donation-dog {
-//   margin-top: 11px;
-
-//   @include media-tablet {
-//     margin-top: 12px;
-//     margin-right: 2px;
-//   }
-
-//   @include media-mobile {
-//     width: 260px;
-//     height: 135.2px;
-//     margin-top: 11px;
-//     margin-right: 0;
-//   }
-// }
-
-// .donation__content {
-//   max-width: 380px;
-//   margin-right: 1px;
-
-//   .title {
-//     padding-top: 1px;
-
-//     @include media-tablet {
-//       padding-top: 1px;
-//     }
-//   }
-
-//   @include media-mobile {
-//     max-width: 280px;
-
-//     .title {
-//       padding-left: 2px;
-//     }
-//   }
-// }
-
-// .donation__subtitle {
-//   @include font($size: 1.5rem, $height: 1.7rem);
-//   color: $color-title;
-//   padding: 19px 0 20px;
-
-//   @include media-mobile {
-//     @include font($size: 1.5rem, $spacing: 0, $height: 2.4rem);
-//     align-items: center;
-//     padding: 20px 0 20px;
-//   }
-// }
-
-// .legal__information-animal {
-//   @include font($family: $arial, $spacing: 0, $size: 1.2rem, $height: 1.8rem);
-//   font-style: italic;
-//   color: $color-donation-description;
-
-//   @include media-mobile {
-//     text-align: justify;
-//   }
-// }
-
-// .img__sredit-card {
-//   margin-right: 15px;
-//   @include media-mobile {
-//     margin-right: 13px;
-//   }
-// }

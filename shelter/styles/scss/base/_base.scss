@@ -1,7 +1,6 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  // overflow-y: overlay;
 }
 
 .body {
@@ -17,22 +16,13 @@ html {
   }
 }
 
-@include media-mobile {
-  html,
-  .body {
+html,
+.body {
+  @include media-mobile {
     position: relative;
     overflow-x: hidden;
   }
 }
-
-// .body.open {
-//   height: 100vh;
-//   overflow: hidden;
-// }
-
-// .background__main-page {
-//   background: $gradient;
-// }
 
 h1 {
   @include font($size: 3.2rem, $height: 3.5rem);
@@ -57,11 +47,3 @@ h3 {
     text-align: center;
   }
 }
-
-// .title {
-//   color: $color-title;
-
-//   // @include media-mobile {
-//   //   text-align: center;
-//   // }
-// }
