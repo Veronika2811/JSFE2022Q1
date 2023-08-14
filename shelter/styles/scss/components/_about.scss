@@ -1,0 +1,60 @@
+.about {
+  padding: 80px 0px 100px;
+
+  @include media-mobile {
+    padding: 40px 0px;
+  }
+}
+
+.about__wrapper {
+  @include flex();
+  gap: 120px;
+
+  @include media-tablet {
+    @include flex($align: center, $direction: column-reverse);
+  }
+
+  @include media-mobile {
+    gap: 40px;
+  }
+}
+
+.about__image {
+  width: 300px;
+  height: 408px;
+  background: url('../images/png/about/pets.png') no-repeat;
+  background-size: cover;
+
+  @include media-tablet {
+    width: adaptiv-value(300, 768);
+    height: adaptiv-value(408, 768);
+  }
+
+  @include media-mobile {
+    width: adaptiv-value(260, 320);
+    height: adaptiv-value(353, 320);
+  }
+}
+
+.about__content {
+  @include flex($align: flex-start, $direction: column);
+  gap: 25px;
+  max-width: 430px;
+
+  @include media-mobile {
+    align-items: center;
+  }
+}
+
+.about__text {
+  @include font(
+    $family: $font-additional,
+    $size: 1.5rem,
+    $spacing: 0rem,
+    $height: 2.4rem
+  );
+
+  @include media-mobile {
+    text-align: justify;
+  }
+}

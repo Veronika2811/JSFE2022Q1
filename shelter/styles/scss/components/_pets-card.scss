@@ -1,0 +1,161 @@
+.pets {
+  padding: 80px 0px 100px;
+  background-color: $color-background-pets;
+
+  @include media-mobile {
+    padding: 40px 0px;
+  }
+}
+
+.pets__wrapper {
+  @include flex($direction: column);
+  gap: 60px;
+  text-align: center;
+
+  @include media-mobile {
+    gap: 40px;
+  }
+}
+
+.pets__slider {
+  @include flex($justify: space-between);
+  gap: 50px;
+
+  @include media-tablet {
+    gap: 10px;
+  }
+
+  @include media-mobile {
+    @include flex($justify: center, $wrap: wrap);
+    gap: 20px 80px;
+    max-width: 270px;
+    margin: 0 auto;
+  }
+}
+
+.slider__content {
+  position: relative;
+  width: 990px;
+  overflow: hidden;
+
+  @include media-tablet {
+    width: 580px;
+  }
+
+  @include media-mobile {
+    max-width: 100%;
+    width: 270px;
+    order: -1;
+  }
+}
+
+.carousel {
+  @extend %transition;
+  position: relative;
+  display: flex;
+  gap: 90px;
+
+  @include media-tablet {
+    gap: 40px;
+  }
+}
+
+.card {
+  @extend %transition;
+  width: 270px;
+  background-color: $color-text-main-hover;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-light;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+    .button {
+      background-color: $color-button-hover;
+      border: 2px solid $color-button-hover;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.card__content {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.card__title {
+  @include font($size: 2rem, $height: 2.3rem);
+  padding-bottom: 30px;
+  color: $color-title;
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1080px;
+  }
+}
+
+@include media-tablet {
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: -620px;
+    }
+  }
+}
+
+@include media-mobile {
+  @keyframes move-left {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: -310px;
+    }
+  }
+}

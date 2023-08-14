@@ -1,0 +1,68 @@
+.donation {
+  padding: 80px 0 100px;
+  background-color: $color-background-pets;
+
+  @include media-mobile {
+    padding: 40px 0px;
+  }
+}
+
+.donation__wrapper {
+  @include flex($wrap: wrap);
+  gap: 30px;
+}
+
+.donation__image {
+  width: 505px;
+  height: 260px;
+  background: url('../images/png/donation/dog.png') no-repeat;
+  background-size: cover;
+
+  @include media-tablet {
+    order: 2;
+    width: adaptiv-value(505, 768);
+    height: adaptiv-value(261, 768);
+  }
+
+  @include media-mobile {
+    width: adaptiv-value(260, 320);
+    height: adaptiv-value(135.2, 320);
+  }
+}
+
+.donation__content {
+  @include flex($align: flex-start, $direction: column);
+  gap: 20px;
+  max-width: 380px;
+
+  @include media-tablet {
+    align-items: center;
+  }
+}
+
+.donation__subtitle {
+  @include font($size: 1.5rem, $height: 1.7rem);
+  color: $color-title;
+}
+
+.credit-card {
+  @include flex();
+  gap: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.donation__description {
+  @include font(
+    $family: $font-additional,
+    $spacing: 0rem,
+    $size: 1.2rem,
+    $height: 1.8rem
+  );
+  font-style: italic;
+  color: $color-donation-description;
+
+  @include media-tablet {
+    text-align: justify;
+  }
+}

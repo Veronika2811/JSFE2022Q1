@@ -1,9 +1,8 @@
-import burgerSubscribe from "../../assets/js_modules/burger.js";
-import { modalSubscribe } from "../../assets/js_modules/popup.js";
-import slideSubscribe from "../../assets/js_modules/sliderMain.js";
+import burgerSubscribe from '../../scripts/burgerSubscribe.js';
+import slideSubscribe from '../../scripts/sliderSubscribe.js';
+import paginationSubscribe from '../../scripts/paginationSubscribe.js';
 
-window.onload = () => {
+window.onload = async () => {
   burgerSubscribe();
-  modalSubscribe();
   slideSubscribe();
 };

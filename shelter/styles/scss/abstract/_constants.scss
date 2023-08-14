@@ -1,0 +1,26 @@
+// Color
+$color-primary: #f1cdb3;
+$color-light: #ffffff;
+$color-dark: #000000;
+$color-text-main: #cdcdcd;
+$color-title: #545454;
+$color-button-text: #292929;
+$color-about-text: #4c4c4c;
+$color-donation-description: #b2b2b2;
+$color-background-pets: #f6f6f6;
+$gradient: url('../images/png/gradient.png'),
+  radial-gradient(60% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+
+// Font
+$font-primary: 'Georgia', Verdana sans-serif;
+$font-additional: 'Arial', Verdana sans-serif;
+
+// Hover
+$color-text-main-hover: #fafafa;
+$color-button-hover: #fddcc4;
+
+$desktop: 1280px;
+$desktop-content: 1200px;
+$tablet-width: 1279px;
+$tablet-content: 1200px;
+$mobile-width: 767px;

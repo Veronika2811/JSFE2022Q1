@@ -1,0 +1,50 @@
+.navigation {
+  @include flex();
+  gap: 35px;
+
+  @include media-mobile {
+    @include flex($direction: column);
+    padding-top: 245px;
+  }
+}
+
+.navigation__link {
+  @extend %transition;
+  @include font(
+    $family: $font-additional,
+    $size: 1.5rem,
+    $spacing: 0rem,
+    $height: 2.4rem
+  );
+  color: $color-text-main;
+
+  &.active {
+    padding-bottom: 5px;
+    color: $color-text-main-hover;
+    border-bottom: 2px solid $color-primary;
+    cursor: default;
+  }
+
+  &:hover {
+    color: $color-text-main-hover;
+  }
+
+  @include media-mobile {
+    @include font($family: $font-additional, $size: 3.2rem, $height: 5.1rem);
+  }
+
+  &_dark {
+    color: $color-title;
+
+    &.active {
+      padding-bottom: 5px;
+      color: $color-title;
+      border-bottom: 2px solid $color-primary;
+      cursor: default;
+    }
+
+    &:hover {
+      color: $color-button-text;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.pets-page {
+  padding: 80px 0px 100px;
+  background-color: $color-background-pets;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 0px;
+
+    @include media-mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.pets__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @include media-mobile {
+    gap: 10px;
+  }
+}
+
+.pagination__page-number {
+  background-color: $color-primary;
+  pointer-events: none;
+}

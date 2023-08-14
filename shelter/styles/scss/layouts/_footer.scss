@@ -1,0 +1,82 @@
+.footer {
+  padding: 40px 0px;
+  background: $gradient;
+}
+
+.footer__wrapper {
+  @include flex();
+  gap: 160px;
+
+  @include media-tablet {
+    @include flex($direction: column);
+    gap: 65px;
+  }
+}
+
+.footer__contacts {
+  @include flex($align: flex-start, $wrap: wrap);
+  gap: 160px;
+
+  @include media-tablet {
+    gap: 60px;
+  }
+}
+
+.title {
+  color: $color-light;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 290px;
+
+  @include media-mobile {
+    align-items: center;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__image {
+  width: 40px;
+  height: 32px;
+}
+
+.contact_email {
+  background-image: url('../images/svg/email.svg');
+}
+
+.contact_phone {
+  background-image: url('../images/svg/phone.svg');
+}
+
+.contact {
+  @include font($size: 2rem, $spacing: 0.06rem, $height: 2.3rem);
+  color: $color-primary;
+}
+
+.contact__location {
+  width: 22px;
+  height: 32px;
+  background-image: url('../images/svg/marker.svg');
+}
+
+.footer__image {
+  margin-bottom: -40px;
+  width: 300px;
+  height: 310px;
+  background-image: url('../images/png/footer/puppy.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-mobile {
+    width: 260px;
+    height: 269px;
+  }
+}

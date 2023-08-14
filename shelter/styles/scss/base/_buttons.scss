@@ -1,0 +1,60 @@
+.button {
+  @extend %transition;
+  @include font($size: 1.7rem, $height: 2.2rem);
+  display: inline-block;
+  padding: 15px 45px;
+  color: $color-button-text;
+  border-radius: 100px;
+
+  &_colored {
+    background-color: $color-primary;
+  }
+
+  &_bordered {
+    background-color: transparent;
+    border: 2px solid $color-primary;
+  }
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+}
+
+.slider__button {
+  @extend %transition;
+  @include font($size: 2rem, $height: 2.3rem, $spacing: 0.12rem);
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+
+  &_left {
+    background: url('../images/svg/btn-left.svg') no-repeat 50%;
+
+    @include media-mobile {
+      order: 1;
+    }
+  }
+
+  &_right {
+    background: url('../images/svg/btn-right.svg') no-repeat 50%;
+
+    @include media-mobile {
+      order: 1;
+    }
+  }
+
+  &_close {
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    background: url('../images/svg/close-btn.svg') no-repeat 50%;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $color-button-hover;
+    border: 2px solid $color-button-hover;
+    cursor: pointer;
+  }
+}

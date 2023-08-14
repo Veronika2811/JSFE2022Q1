@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: $desktop-content;
+  margin: auto;
+
+  @include media-tablet {
+    padding: 0px 30px;
+  }
+
+  @include media-mobile {
+    padding: 0px 10px;
+  }
+}
