@@ -1,0 +1,110 @@
+.about {
+  padding: 80px 0px 100px;
+
+  @include media-mobile {
+    padding: 42px 0px;
+  }
+}
+
+.about__wrapper {
+  @include flex();
+  gap: 120px;
+
+  @include media-tablet {
+    @include flex($align: center, $direction: column-reverse);
+  }
+
+  @include media-mobile {
+    gap: 42px;
+  }
+}
+
+.about__image {
+  width: 300px;
+  height: 408px;
+  background: url('/images/png/about/pets.png') no-repeat;
+  background-size: cover;
+
+  @include media-tablet {
+    width: adaptiv-value(300, 768);
+    height: adaptiv-value(408, 768);
+  }
+
+  @include media-mobile {
+    width: adaptiv-value(260, 320);
+    height: adaptiv-value(353, 320);;
+  }
+}
+
+.about__content {
+  @include flex($align: flex-start, $direction: column);
+  gap: 25px;
+  max-width: 430px;
+
+  @include media-mobile {
+    align-items: center;
+  }
+}
+
+.about__text {
+  @include font($family: $font-additional, $size: 1.5rem, $spacing: 0rem, $height: 2.4rem);
+
+  @include media-mobile {
+    text-align: justify;
+  }
+}
+
+// .about {
+//   background-color: $color-light;
+// }
+
+// .about__wrapper {
+//   @include flex($align: flex-start);
+//   gap: 120px;
+
+//   @include media-tablet {
+//     flex-direction: column-reverse;
+//     align-items: center;
+//     gap: 80px;
+//   }
+  
+//   @include media-mobile {
+//     margin: 0 15px;
+//     gap: 41px;
+//   }
+// }
+
+// .about__content {
+//   max-width: 430px;
+//   padding-top: 15px;
+
+//   @include media-tablet {
+//     padding-top: 1px;
+//   }
+// }
+
+// .about__subtitle {
+//   @include font($family: $arial, $size: 1.5rem, $spacing: 0, $height: 2.4rem);
+//   padding-top: 24px;
+//   color: $color-about-text;
+
+//   &:last-child {
+//     padding-top: 25px;
+
+//     @include media-mobile {
+//       padding-top: 22px;
+//     }
+//   }
+
+//   @include media-mobile {
+//     text-align: justify;
+//     padding-top: 25px;
+//   }
+// }
+
+// .img__about {
+//   @include media-mobile {
+//     width: 260px;
+//     height: 353.6px;
+//   }
+// }

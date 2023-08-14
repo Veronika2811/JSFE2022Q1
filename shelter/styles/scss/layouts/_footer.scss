@@ -1,0 +1,256 @@
+.footer {
+  padding: 40px 0px;
+  background: $gradient;
+}
+
+.footer__wrapper {
+  @include flex();
+  gap: 160px;
+
+  @include media-tablet {
+    @include flex($direction: column);
+    gap: 65px;
+  }
+}
+
+.footer__contacts {
+  @include flex($align: flex-start, $wrap: wrap);
+  gap: 160px;
+
+  @include media-tablet {
+    gap: 61px;
+  }
+}
+
+.title {
+  color: $color-light;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 290px;
+
+  @include media-mobile {
+    align-items: center;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__image {
+  width: 40px;
+  height: 32px;
+}
+
+.contact_email {
+  background-image: url('/images/svg/email.svg');
+}
+
+.contact_phone {
+  background-image: url('/images/svg/phone.svg');
+}
+
+.contact {
+  @include font($size: 2rem, $spacing: 0.06rem, $height: 2.3rem);
+  color: $color-primary;
+}
+
+.contact__location {
+  width: 22px;
+  height: 32px;
+  background-image: url('/images/svg/marker.svg');
+}
+
+.footer__image {
+  margin-bottom: -40px;
+  width: 300px;
+  height: 310px;
+  background-image: url('/images/png/footer/puppy.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-mobile {
+    width: 260px;
+    height: 269px;
+  }
+}
+
+// .footer__wrapper {
+//   background: $bg-gradient;
+//   padding: 40px 40px 0 39px;
+//   @include flex($align: flex-start, $justify: space-between);
+//   flex-direction: row;
+
+//   .title {
+//     color: $color-light;
+//     padding-left: 1px;
+//   }
+
+//   @include media-tablet {
+//     @include flex();
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     padding: 31px 31px 0 40px;
+//     gap: 62px;
+//   }
+
+//   @include media-mobile {
+//     padding: 31px 10px 0 10px;
+//     gap: 38px;
+//   }
+// }
+
+// .footer__content {
+//   @include flex($align: flex-start, $justify: space-between);
+//   gap: 159px;
+//   padding-top: 17px;
+
+//   @include media-tablet {
+//     gap: 60px;
+//     padding-top: 0px;
+//   }
+
+//   @include media-mobile {
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     @include flex();
+//     gap: 40px;
+//   }
+// }
+
+// .contacts {
+//   @include flex($align: flex-start, $justify: flex-start);
+//   flex-direction: column;
+//   width: 280px;
+//   gap: 40px;
+// }
+
+// .contacts__item {
+//   @include flex();
+//   flex-direction: row;
+//   gap: 20px;
+//   height: 32px;
+//   padding-top: 2px;
+//   padding-left: 1px;
+
+//   @include media-mobile {
+//     margin: 0 auto;
+//   }
+// }
+
+// .contact {
+//   color: $color-primary;
+//   @include font($size: 20px, $spacing: 0.06em, $height: 23px);
+//   align-items: center;
+//   padding-bottom: 2px;
+// }
+
+// .image__email,
+// .image__phone {
+//   padding-bottom: 3px;
+// }
+
+// .location {
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 312px;
+
+//   @include media-mobile {
+//     width: 300px;
+//     .title {
+//       padding: 0 15px;
+//     }
+//   }
+// }
+
+// .location__item {
+//   @include flex($justify: flex-start);
+//   gap: 20px;
+//   padding-top: 33px;
+
+//   &:last-child {
+//     padding-top: 30px;
+//   }
+
+//   @include media-mobile {
+//     padding-top: 40px;
+//     &:last-child {
+//       padding-top: 37px;
+//     }
+//   }
+// }
+
+// .image__location {
+//   padding-bottom: 3px;
+// }
+
+// .img__footer-puppy {
+//   @include media-tablet {
+//     margin-right: 10px;
+//   }
+
+//   @include media-mobile {
+//     width: 260px;
+//     height: 269px;
+//     margin-right: 0px;
+//   }
+// }
+
+// // Pets pages
+
+// .contacts__pets {
+//   gap: 39px;
+
+//   @include media-tablet {
+//     gap: 40px;
+//   }
+// }
+
+// .contacts__item--last {
+//   padding-top: 3px;
+// }
+
+// .contacts__item--phone {
+//   @include media-tablet {
+//     padding-bottom: 3px;
+//   }
+// }
+
+// .image__email-pets {
+//   padding-bottom: 3px;
+// }
+// .image__phone-pets {
+//   padding-bottom: 0;
+// }
+
+// .location__item--first {
+//   padding-top: 32px;
+  
+//   @include media-mobile {
+//     padding-top: 40px;
+//   }
+// }
+
+// .location__item--last {
+//   margin-top: 1px;
+// }
+
+// .footer__wrapper--pets {
+//   padding-top: 40px;
+
+//   @include media-tablet {
+//     padding-top: 30px;
+//   }
+// }
+
+// .img__footer-puppy--pets {
+//   @include media-mobile {
+//     margin-top: -1px;
+//   }
+// }

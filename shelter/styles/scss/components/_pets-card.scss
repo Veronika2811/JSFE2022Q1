@@ -1,0 +1,458 @@
+.pets {
+  padding: 80px 0px 100px;
+  background-color: $color-background-pets;
+
+  @include media-mobile {
+    padding: 42px 0px;
+  }
+}
+
+.pets__wrapper {
+  @include flex($direction: column);
+  gap: 60px;
+  text-align: center;
+
+  @include media-mobile {
+    gap: 42px;
+  }
+}
+
+.pets__slider {
+  @include flex($justify: space-between);
+  gap: 53px;
+
+  @include media-tablet {
+    gap: 10px;
+  }
+
+  @include media-mobile {
+    @include flex($justify: center, $wrap: wrap);
+    gap: 18px 80px;
+    max-width: 270px;
+    margin: 0 auto;
+  }
+}
+
+.slider__content {
+  position: relative;
+  width: 990px;
+  overflow: hidden;
+  @include media-tablet {
+    width: 580px;
+  }
+  @include media-mobile {
+    max-width: 100%;
+    width: 270px;
+    order: -1;
+  }
+}
+
+.carousel {
+  position: relative;
+    display: flex;
+    gap: 90px;
+    transition: all ease 3s;
+  // @include flex();
+  // gap: 90px;
+  // width: 990px;
+  // transition: all 2s ease-in;
+
+  @include media-tablet {
+    gap: 40px;
+  }
+}
+
+.card {
+  background-color: $color-text-main-hover;
+  border-radius: 10px;
+  @extend %transition;
+  cursor: pointer;
+  width: 270px;
+
+  &:hover {
+    background-color: $color-light;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+    .button {
+      background-color: $color-button-hover;
+      border: 2px solid $color-button-hover;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.pets .card {
+  // background-color: $color-text-main-hover;
+  // border-radius: 10px;
+  // @extend %transition;
+  // cursor: pointer;
+
+  // &:hover {
+  //   background-color: $color-light;
+  //   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+  //   .button {
+  //     background-color: $color-button-hover;
+  //     border: 2px solid $color-button-hover;
+
+  //     &:hover {
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
+
+  @include media-tablet {
+    &:last-child {
+      // display: none;
+    }
+
+    &:nth-child(3) {
+      // display: none;
+    }
+  }
+
+  @include media-mobile {
+    width: 270px;
+    // height: 270px;
+
+    &:nth-child(2) {
+      // display: none;
+    }
+  }
+}
+
+.card__content {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.card__title {
+  padding-bottom: 30px;
+  @include font($size: 2rem, $height: 2.3rem);
+  color: $color-title;
+}
+
+// .pets {
+//   background-color: $color-background-pets;
+
+//   .title {
+//     text-align: center;
+//     padding-top: 1px;
+//     padding-left: 2px;
+
+//     // @include media-mobile {
+//     //   padding-top: 3px;
+//     // }
+//   }
+// }
+
+// .pets__slider {
+//   @include flex($justify: space-between);
+//   padding-top: 59px;
+//   padding-bottom: 60px;
+
+//   // @include media-tablet {
+//   //   justify-content: center;
+//   //   gap: 12px;
+//   // }
+
+//   // @include media-mobile {
+//   //   padding-top: 42px;
+//   //   flex-wrap: wrap;
+//   //   gap: 18px 80px;
+//   //   max-width: 350px;
+//   //   margin: 0 auto;
+//   //   padding-bottom: 42px;
+//   // }
+// }
+
+// .pets__cards {
+//   @include flex();
+//   gap: 90px;
+
+//   // @include media-tablet {
+//   //   gap: 40px;
+//   // }
+
+//   // @include media-mobile {
+//   //   margin: 0 auto;
+//   // }
+// }
+
+// .card {
+//   background-color: $color-text-main-hover;
+//   border-radius: 9px;
+//   @extend %transition;
+//   cursor: pointer;
+
+//   &:hover {
+//     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+//     background-color: $color-light;
+
+//     .button {
+//       background-color: $color-button-hover;
+//       border: 2px solid $color-button-hover;
+//     }
+//   }
+// }
+// @include media-tablet {
+// .main__two--card {
+//   display: none;
+// }
+// }
+
+// @include media-mobile {
+// .main__last--card {
+//   display: none;
+// }
+// }
+
+// .img__card {
+//   @include media-mobile {
+//     width: 270px;
+//     height: 270px;
+//   }
+// }
+
+// .card__content {
+//   padding-top: 27px;
+//   padding-bottom: 30px;
+//   text-align: center;
+//   padding-left: 1px;
+// }
+
+// .pets__name {
+//   @include font($size: 2rem, $height: 2.3rem);
+//   color: $color-title;
+//   padding: 30px 0;
+//   text-align: center;
+// }
+
+// .pets__button-position {
+//   text-align: center;
+//   margin-left: 1px;
+// }
+
+// // Pets page
+
+// .pets__container {
+//   background-color: $color-background-pets;
+
+//   .title {
+//     text-align: center;
+//     padding-top: 1px;
+//     padding-left: 2px;
+//   }
+// }
+
+// .pets__container--wrapper {
+//   padding: 80px 40px 100px 40px;
+
+//   @include media-tablet {
+//     padding: 80px 30px 77px 30px;
+//   }
+
+//   @include media-mobile {
+//     padding: 41px 10px 42px 10px;
+//     margin-top: 120px;
+//   }
+// }
+
+// .pets__cards--container {
+//   @include flex($justify: space-between);
+//   flex-wrap: wrap;
+//   row-gap: 31px;
+//   padding-top: 59px;
+//   padding-bottom: 58px;
+
+//   @include media-tablet {
+//     @include flex();
+//     padding-top: 29px;
+//     padding-bottom: 37px;
+//     column-gap: 40px;
+//     row-gap: 31px;
+//     max-width: 580px;
+//     margin: 0 auto;
+//   }
+
+//   @include media-mobile {
+//     padding-top: 42px;
+//     padding-bottom: 39px;
+//     flex-direction: column;
+//   }
+// }
+
+// .pets__navigation {
+//   @include flex();
+//   gap: 20px;
+
+//   @include media-mobile {
+//     gap: 10px;
+//   }
+// }
+
+// // Carousel
+
+// .carousel-wrapper {
+//   width: 990px;
+//   overflow: hidden;
+
+//   @include media-tablet {
+//     width: 580px;
+//   }
+
+//   @include media-mobile {
+//     width: 270px;
+//   }
+// }
+
+// .carousel {
+//   display: flex;
+//   position: relative;
+//   left: -990px;
+
+//   @include media-tablet {
+//     left: -580px;
+//   }
+//   @include media-mobile {
+//     left: -270px;
+//   }
+// }
+
+// @keyframes move-right {
+//   from {
+//     left: -990px;
+//   }
+//   to {
+//     left: -1980px;
+//   }
+// }
+
+// @keyframes move-left {
+//   from {
+//     left: -990px;
+//   }
+//   to {
+//     left: 0px;
+//   }
+// }
+
+// @include media-tablet {
+//   @keyframes move-right {
+//     from {
+//       left: -580px;
+//     }
+//     to {
+//       left: -1160px;
+//     }
+//   }
+
+//   @keyframes move-left {
+//     from {
+//       left: -580px;
+//     }
+//     to {
+//       left: 0px;
+//     }
+//   }
+// }
+
+// @include media-mobile {
+//   @keyframes move-right {
+//     from {
+//       left: -270px;
+//     }
+//     to {
+//       left: -540px;
+//     }
+//   }
+
+//   @keyframes move-left {
+//     from {
+//       left: -270px;
+//     }
+//     to {
+//       left: 0px;
+//     }
+//   }
+// }
+
+// .transition-right {
+//   animation-name: move-right;
+//   animation-duration: 2s;
+// }
+
+// .transition-left {
+//   animation-name: move-left;
+//   animation-duration: 2s;
+// }
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1080px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+@include media-tablet {
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: -620px;
+    }
+  }
+}
+
+@include media-mobile {
+  @keyframes move-left {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: -310px;
+    }
+  }
+}

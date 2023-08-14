@@ -1,0 +1,3 @@
+@function adaptiv-value($val, $width) {
+  @return calc($val / $width * 100vw);
+};

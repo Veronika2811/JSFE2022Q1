@@ -1,0 +1,67 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  // overflow-y: overlay;
+}
+
+.body {
+  max-width: $desktop;
+  margin: 0 auto;
+  font-family: $font-primary;
+  color: $color-about-text;
+  background-color: $color-light;
+
+  &.open {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@include media-mobile {
+  html,
+  .body {
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+// .body.open {
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .background__main-page {
+//   background: $gradient;
+// }
+
+h1 {
+  @include font($size: 3.2rem, $height: 3.5rem);
+}
+
+h2 {
+  @include font($size: 4.4rem, $spacing: 0rem, $height: 5.7rem);
+  color: $color-light;
+
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.2rem);
+    text-align: center;
+  }
+}
+
+h3 {
+  @include font($size: 3.5rem, $height: 4.5rem);
+  color: $color-title;
+
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.2rem);
+    text-align: center;
+  }
+}
+
+// .title {
+//   color: $color-title;
+
+//   // @include media-mobile {
+//   //   text-align: center;
+//   // }
+// }

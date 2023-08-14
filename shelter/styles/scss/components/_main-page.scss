@@ -1,0 +1,118 @@
+.main-page {
+  padding-top: 180px;
+  margin-top: -120px;
+  background: $gradient;
+}
+
+.main-page__wrapper {
+  @include flex($align: flex-start, $justify: space-between);
+
+  @include media-tablet {
+    @include flex($align: center, $direction: column);
+    gap: 100px;
+  }
+}
+
+.main-page__content {
+  max-width: 460px;
+  padding-top: 160px;
+
+  @include media-tablet {
+    padding-top: 0px;
+  }
+
+  @include media-mobile {
+    text-align: center;
+  }
+}
+
+.main-page__title {
+  padding-bottom: 40px;
+}
+
+.main-page__subtitle {
+  padding-bottom: 40px;
+  @include font($family: $font-additional, $size: 1.5rem, $spacing: 0rem, $height: 2.4rem);
+  color: $color-text-main;
+}
+
+.main-page__image {
+  width: 698px;
+  height: 728px;
+  background: url('/images/png/main-page/puppy.png') no-repeat;
+
+  @include media-tablet {
+    width: adaptiv-value(569, 768);
+    height: adaptiv-value(593, 768);
+    align-self: flex-end;
+    background-size: contain;
+    background-position: 50% 100%;
+  }
+}
+
+// .main-page__wrapper {
+//   padding: 0 40px;
+//   @include flex($align: flex-start, $justify: space-between);
+
+//   @include media-tablet {
+//     flex-direction: column;
+//     @include flex();
+//     gap: 100px;
+//     padding: 0 30px;
+//   }
+
+//   @include media-mobile {
+//     padding: 29px 10px 0 10px;
+//     gap: 105px;
+//   }
+// }
+
+// .main__page-content {
+//   padding-top: 164px;
+//   max-width: 460px;
+
+//   @include media-tablet {
+//     padding-top: 31px;
+//   }
+
+//   @include media-mobile {
+//     text-align: center;
+//   }
+// }
+
+// .button__position--main-page {
+//   @include media-tablet {
+//     text-align: center;
+//   }
+// }
+
+// .main__page-title {
+//   @include font($size: 4.4rem, $spacing: 0, $height: 5.7rem);
+//   color: $color-light;
+//   padding-bottom: 41px;
+
+//   @include media-mobile {
+//     @include font($size: 2.5rem, $height: 3.2rem);
+//     padding-left: 1.6px;
+//     padding-bottom: 42px;
+//   }
+// }
+
+// .main__page-subtitle {
+//   @include font($family: $arial, $size: 1.5rem, $spacing: 0, $height: 2.4rem);
+//   color: $color-text-main;
+//   padding-bottom: 42px;
+// }
+
+// .img__puppy {
+//   @include media-tablet {
+//     margin-left: auto;
+//     width: 569px;
+//     height: 593px;
+//   }
+
+//   @include media-mobile {
+//     width: 260px;
+//     height: 271.77px;
+//   }
+// }
